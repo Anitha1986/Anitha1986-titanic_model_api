@@ -36,6 +36,8 @@ def index(request: Request) -> Any:
 
     return HTMLResponse(content=body)
 
+def add_numbers(a,b):
+    return a + b
 
 app.include_router(api_router, prefix=settings.API_V1_STR)
 app.include_router(root_router)
