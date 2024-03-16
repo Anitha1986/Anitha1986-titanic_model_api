@@ -7,7 +7,7 @@ from titanic_model.processing.validation import DataInputSchema
 class PredictionResults(BaseModel):
     errors: Optional[Any]
     version: str
-    #predictions: Optional[List[int]]
+    # predictions: Optional[List[int]]
     predictions: Optional[int]
 
 
@@ -27,7 +27,7 @@ class MultipleDataInputs(BaseModel):
                         "SibSp": 0,
                         "Parch": 2,
                         "Ticket": "248738",
-                        "Cabin": 'A5',
+                        "Cabin": "A5",
                         "Embarked": "S",
                         "Fare": 29,
                     }
