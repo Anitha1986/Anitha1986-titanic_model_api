@@ -28,6 +28,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Install Linting and Testing Tools
+      run: |
+        pip install pylint pytest black
+
     - name: Lint with pylint
       run: |
         pylint app/
@@ -38,4 +42,4 @@ jobs:
 
     - name: Format code with Black
       run: |
-        black app/
+        black --check app/
